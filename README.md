@@ -1,35 +1,31 @@
-# Starships
+### Phase 3
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/starships`. To experiment with that code, run `bin/console` for an interactive prompt.
+#### What are we learning? 
+- Ruby! 
 
-TODO: Delete this and the text above, and describe your gem
+#### Phase Objectives:
+- Understand the principles of Ruby as a language including principles of object oriented programming
+- Understand the characteristics of a relational database
+- Perform CRUD actions with a database using Active Record
+- Design an API to handle CRUD actions
+- Communicate with an API using different HTTP verbs
+- Create and present a project with a React frontend and a database-backed API backend
 
-## Installation
+# Ruby Fundamentals
 
-Add this line to your application's Gemfile:
+### Lecture Deliverables
+- Create a CLI(command line interface) that:
+    - Welcomes and prompts user to input name.
+    - Prints a menu of options: Create a new starshop, see a list of starships or exit.
+    - Handles users selection and allows user to continue using app, looping through the program until exit is selected.
 
-```ruby
-gem 'starships'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install starships
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/starships.
+### Lecture Take aways 
+- Variables
+- Methods
+- Conditionals
+- Arrays 
+- Hashes
+- Loops
+- Iteration
+- puts
+- binding.pry
