@@ -1,35 +1,77 @@
-# Starships
+# Ruby Fundamentals
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/starships`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Lecture topics:
 
-TODO: Delete this and the text above, and describe your gem
+- Variables
+- Methods
+- Conditionals
+- Arrays
+- Hashes
+- Loops
+- Iteration
+- puts
+- binding.pry
 
-## Installation
+### Introduction
 
-Add this line to your application's Gemfile:
+- Up to this point, we have only been looking and working on front end applications, without our own customized backend so we are going to be moving towards building a backend using the Ruby language
+- The reason for this is because Ruby already comes equipped with the tools necessary to create a strong backend
+- We will start off by building an application that is used through a command line interface, which is the terminal, and then we will move that app to the web browser
 
-```ruby
-gem 'starships'
+### What we will be building?
+
+- The main goal of this app will be to allow users to create and submit their own pizzas.
+
+#### Program flow:
+
+1. Welcome user and prompt to input name
+2. Provide menu options: Create a new starship or see list of existing starships
+3. If user selects to add a new starship, it will be added to the already submitted collection
+4. If the list is selected, print a list of all starships
+5. Allow a user to loop through program
+6. Allow user to exit program
+
+### Application Mechanics
+
+- Go over the different files and folders and explain how they all work together
+
+- To run the application:
+
+```
+./bin/run
 ```
 
-And then execute:
+- If permission is denied:
 
-    $ bundle install
+```
+chmod +x ./bin/run
+```
 
-Or install it yourself as:
+So our first goal is going to be to add some greetings and help user navigate through app:
 
-    $ gem install starships
+```
+def init
+  puts "Welcome to the starships app!"
+  puts "Tell us your name: "
+  user = gets.strip
+  puts "Awesome, #{user.capitalize}, What would you like to do?"
+  menu
+end
+```
 
-## Usage
+Next up, we need to build the menu:
 
-TODO: Write usage instructions here
+```
+def menu
+  puts "Enter the number of your selection, or 'exit' to leave the app."
+  menu_options
+end
 
-## Development
+def menu_options
+  puts " 1. Create a new starship!"
+  puts " 2. View all the starships"
+  puts " 3. Change your mind? Enter exit to leave the app"
+end
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/starships.
+Now we need to handle our users selection
